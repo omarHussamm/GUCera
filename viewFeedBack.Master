@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="viewFeedBack.master.cs" Inherits="GUCera.viewFeedBack1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/viewFeedBack.master" CodeFile="viewFeedBack.master.cs" Inherits="GUCera.viewFeedBack1" %>
+
+<asp:Content ID="BodyContent" runat="server"  ContentPlaceHolderID="ContentPlaceHolder">
+    <table width="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA" >
+        <tr align="left" style="background-color:#004080;color:White;" >
+            <td> ID </td>                        
+            <td> Name </td>            
+            <td>Pass</td>                        
+        </tr>
+
+        <%=getWhileLoopData()%>
+
+    </table>
+</asp:Content>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
